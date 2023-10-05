@@ -1,0 +1,55 @@
+<p>register screen</p>
+
+<form class="form" [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <div class="form-group text-center">
+        <h2>No eres usuario</h2>
+        <h1>Registrate</h1>
+    </div>
+
+    <!-- Email input -->
+    <div>
+        <label class="form-label" for="form2Example1">Email address</label>
+        <input type="email" id="form2Example1" class="form-control" formControlName="email" />
+    </div>
+    <br>
+
+    <!-- Password input -->
+    <div>
+        <label class="form-label" for="form2Example2">Password</label>
+        <div class="input-group">
+            <input type="{{ passwordVisible ? 'text' : 'password' }}" id="form2Example2" class="form-control"
+                formControlName="password" />
+            <span class="input-group-text" id="togglePassword" (click)="togglePasswordVisibility()">
+                <i class="fas fa-eye"></i>
+            </span>
+        </div>
+    </div>
+    <br>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" value="Enviar">Registrarme</button>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+        <p>are you registered? <a href="http://localhost:4200/login">Login</a></p>
+        <p>or sign up with:</p>
+
+        <button type="button" class="btn btn-link btn-floating mx-1" (click)="onClick">
+            <i class="fab fa-google"></i>
+        </button>
+
+    </div>
+</form>
+
+<!-- <h2>Registro de usuario</h2>
+<form [formGroup]="formReg" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <input type="submit" value="Enviar">
+</form> -->
