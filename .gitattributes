@@ -1,0 +1,6 @@
+# Configuración para manejar finales de línea
+* text=auto
+
+# Excepciones si necesitas mantener el formato
+*.svg binary
+*.png binary
