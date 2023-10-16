@@ -49,4 +49,24 @@ export class UserService {
     const user = this.auth.currentUser;
     return user ? user.email : null;
   }
+
+  // ...
+
+public async sendVerificationEmail(email: string, verificationCode: string): Promise<void> {
+  // Implementación de la función sendVerificationEmail
+}
+
+public async verifyCode(verificationCode: string, email: string): Promise<boolean> {
+  // Implementación de la función verifyCode
+  
+  // Supongamos que isCodeCorrect es un valor booleano que determina si el código es correcto
+  const isCodeCorrect = true; // Aquí deberías realizar la lógica de verificación
+
+  return isCodeCorrect; // Devolver el resultado como una promesa resuelta
+}
+
+
+// ...
+
+
 }

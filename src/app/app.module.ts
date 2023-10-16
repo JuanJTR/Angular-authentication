@@ -14,6 +14,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SendEmailComponent } from './components/send-email/send-email.component';
 import { VerifyLoginComponent } from './components/verify-login/verify-login.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,8 @@ import { VerifyLoginComponent } from './components/verify-login/verify-login.com
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth())
   ],

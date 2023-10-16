@@ -1,0 +1,12 @@
+.inputcode{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 250px; */
+    margin-left:  25%;
+    margin-right: 25%;
+    text-align: center;
+}
+.inputcode input {
+  text-align: center;
+}

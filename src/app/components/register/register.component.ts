@@ -53,6 +53,7 @@ export class RegisterComponent implements OnInit {
       }
     })
     .catch(error => {
+      //this.userService.register(this.formReg.value)
       console.log('Error en registro o el usuario ya esta registrado:', error);
       this.router.navigate(['/login']); // Redirigir a la página de login en caso de error
     });
